@@ -2,6 +2,7 @@ package uz.gita.tune_consulting.data.firebase.impl
 
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.catch
@@ -28,6 +29,7 @@ class CardHelperImpl @Inject constructor(
                         trySend(ResultData.Error(error))
                     }
                 }
+            awaitClose()
         }.catch { error ->
             emit(ResultData.Error(error))
         }.flowOn(Dispatchers.IO)
@@ -41,6 +43,27 @@ class CardHelperImpl @Inject constructor(
                 }.addOnFailureListener { e ->
                     trySend(ResultData.Error(e))
                 }
+            awaitClose()
+        }.catch { error ->
+            emit(ResultData.Error(error))
+        }.flowOn(Dispatchers.IO)
+
+    override fun isAlreadyAddedCard(cardRequest: CardRequest): Flow<ResultData<Unit>> =
+        callbackFlow<ResultData<Unit>> {
+            fireStore.collection(CARDS_COLLECTION)
+                .whereEqualTo("cardNumber", cardRequest.cardNumber)
+                .whereEqualTo("cardExpiredDate", cardRequest.cardExpiredDate)
+                .get()
+                .addOnSuccessListener {
+                    if (it.documents.isNotEmpty()) {
+                        trySend(ResultData.Message("Card already added"))
+                    } else {
+                        trySend(ResultData.Success(Unit))
+                    }
+                }.addOnFailureListener {
+                    trySend(ResultData.Error(it))
+                }
+            awaitClose()
         }.catch { error ->
             emit(ResultData.Error(error))
         }.flowOn(Dispatchers.IO)

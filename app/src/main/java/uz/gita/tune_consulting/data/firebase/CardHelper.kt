@@ -12,4 +12,6 @@ interface CardHelper {
 
     fun addCard(cardRequest: CardRequest): Flow<ResultData<CardResponse>>
 
+    fun isAlreadyAddedCard(cardRequest: CardRequest): Flow<ResultData<Unit>>
+
 }
