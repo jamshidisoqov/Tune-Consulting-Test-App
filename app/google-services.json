@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "845564014904",
+    "project_id": "tune-consulting-74c00",
+    "storage_bucket": "tune-consulting-74c00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845564014904:android:4e95d8f901138f654651cd",
+        "android_client_info": {
+          "package_name": "uz.gita.tune_consulting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845564014904-sc4jtdu6g6pq4ed4fmo8hsup7iclfju3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB0utjTgzQCDVjISPVUwS1FAgZGcPPTs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845564014904-sc4jtdu6g6pq4ed4fmo8hsup7iclfju3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
