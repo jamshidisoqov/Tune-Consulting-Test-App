@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_standart">8dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_extra_small">2dp</dimen>
+    <dimen name="margin_component">12dp</dimen>
+    <dimen name="margin_component_std">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_extra_large">32dp</dimen>
+
+    <dimen name="image_size">24dp</dimen>
+    <dimen name="clickable_image_size">40dp</dimen>
+
+</resources>

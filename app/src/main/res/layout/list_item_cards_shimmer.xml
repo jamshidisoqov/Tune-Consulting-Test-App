@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:layout_margin="@dimen/margin_standart"
+    app:cardCornerRadius="@dimen/margin_large">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B8D8F1"
+        android:padding="@dimen/margin_component">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/image_bank_logo"
+            android:layout_width="100dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="@dimen/margin_standart"
+            app:cardBackgroundColor="@color/primaryVariant"
+            app:cardCornerRadius="@dimen/margin_large"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_standart"
+            android:background="@drawable/bg_blur"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_standart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_bank_logo">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:background="@drawable/bg_shimmer" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1f" />
+
+                <View
+                    android:layout_width="@dimen/clickable_image_size"
+                    android:layout_height="@dimen/margin_extra_large"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_shimmer" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_weight="1f"
+                android:background="@drawable/bg_shimmer"
+                android:gravity="center_vertical"
+                tools:text="0.0 UZS" />
+
+            <View
+                android:layout_width="160dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_standart"
+                android:layout_weight="1f"
+                android:background="@drawable/bg_shimmer"
+                android:gravity="center_vertical"
+                tools:text="0.0 UZS" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_standart"
+                android:layout_weight="1f"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="120dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/bg_shimmer" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1f" />
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:background="@drawable/bg_shimmer" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

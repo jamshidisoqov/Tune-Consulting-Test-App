@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Tune consulting</string>
+    <string name="cards">Cards</string>
+    <string name="default_user_full_name">Jamshid Isoqov</string>
+    <string name="default_card_name">PPP cash</string>
+    <string name="error">Error</string>
+    <string name="message">Message</string>
+    <string name="close">Close</string>
+    <string name="retry">Retry</string>
+    <string name="rf_cards">RF cards</string>
+    <string name="adding_card">Adding card</string>
+    <string name="card_number">Card number</string>
+    <string name="expired_date">Expired date</string>
+    <string name="hint_date">MM/YY</string>
+    <string name="hint_card_number">0000000000000000</string>
+    <string name="continue_text">Continue</string>
+    <string name="enter_card_info">Enter card info</string>
 </resources>

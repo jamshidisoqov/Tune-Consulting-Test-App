@@ -2,8 +2,12 @@
 <resources>
     <color name="primary">#EDEEF0</color>
     <color name="primaryVariant">#E1DDF6</color>
+    <color name="onBackground">#CACACC</color>
     <color name="secondary">#6D28EE</color>
     <color name="secondaryVariant">#9061EC</color>
+    <color name="secondaryVariantTrans">#BA9EF3</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="error_color">#D61E1E</color>
+    <color name="error_color_trans">#80D61E1E</color>
 </resources>

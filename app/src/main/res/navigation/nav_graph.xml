@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        tools:layout="@layout/screen_splash"
+        android:name="uz.gita.tune_consulting.presentation.ui.splash.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_cardsScreen"
+            app:destination="@id/cardsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardsScreen"
+        tools:layout="@layout/screen_cards"
+        android:name="uz.gita.tune_consulting.presentation.ui.cards.CardsScreen"
+        android:label="CardsScreen" />
+</navigation>

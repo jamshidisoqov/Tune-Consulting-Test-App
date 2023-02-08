@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/action_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/margin_standart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_back"
+            android:layout_width="@dimen/clickable_image_size"
+            android:layout_height="@dimen/clickable_image_size"
+            android:background="@drawable/bg_clickable_icon"
+            android:padding="@dimen/margin_standart"
+            android:src="@drawable/ic_back" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1f" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_add_card"
+            android:layout_width="@dimen/clickable_image_size"
+            android:layout_height="@dimen/clickable_image_size"
+            android:background="@drawable/bg_clickable_icon"
+            android:padding="@dimen/margin_standart"
+            android:src="@drawable/ic_add"
+            app:tint="@color/secondary" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:background="@drawable/bg_clickable_icon"
+            android:text="@string/rf_cards"
+            android:textColor="@color/secondary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_add_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_component"
+        android:text="@string/adding_card"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar_container" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_standart"
+        android:text="@string/enter_card_info"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/container_card"
+        app:layout_constraintStart_toStartOf="@id/container_card" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/container_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_component"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_card"
+        app:layout_constraintVertical_bias="0.23">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_large">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_number"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:id="@+id/input_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="@dimen/margin_standart"
+                android:background="@drawable/bg_input_text"
+                android:drawableEnd="@drawable/ic_scanner"
+                android:drawableTint="@color/secondary"
+                android:hint="@string/hint_card_number"
+                android:inputType="number"
+                android:padding="@dimen/margin_component"
+                android:textColorHint="@color/onBackground"
+                android:textStyle="bold"
+                app:mask="#### #### #### ####"
+                tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_component"
+                android:text="@string/expired_date"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_card_expired_date"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="@dimen/margin_standart"
+                android:background="@drawable/bg_input_text"
+                android:focusable="false"
+                android:hint="@string/hint_date"
+                android:inputType="none"
+                android:padding="@dimen/margin_component"
+                android:textColorHint="@color/onBackground"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_card"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="@dimen/margin_component"
+        android:background="@drawable/bg_button_state"
+        android:enabled="false"
+        android:text="@string/continue_text"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

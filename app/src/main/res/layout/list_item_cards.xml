@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:layout_margin="@dimen/margin_standart"
+    app:cardCornerRadius="@dimen/margin_large">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B8D8F1"
+        android:padding="@dimen/margin_component">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_bank_logo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/asaka"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_blur"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_standart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_bank_logo">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:text="@string/default_card_name"
+                    tools:text="@string/default_card_name" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1f" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/clickable_image_size"
+                    android:layout_height="@dimen/margin_extra_large"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_card"
+                    android:src="@drawable/uz_card" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_card_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="1f"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="0.0 UZS" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="1f"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:text="8600 02** **** 1949" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="1f"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_card_owner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="@string/default_user_full_name"
+                    tools:text="@string/default_user_full_name" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1f"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_card_expired_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textStyle="bold"
+                    tools:text="12/27" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

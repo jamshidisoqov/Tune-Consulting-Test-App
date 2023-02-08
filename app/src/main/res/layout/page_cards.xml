@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_container_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:ignore="UselessLeaf">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            app:shimmer_duration="1000"
+            app:shimmer_repeat_mode="restart"
+            app:shimmer_shape="radial">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/list_item_cards_shimmer" />
+
+                <include layout="@layout/list_item_cards_shimmer" />
+
+                <include layout="@layout/list_item_cards_shimmer" />
+
+                <include layout="@layout/list_item_cards_shimmer" />
+
+                <include layout="@layout/list_item_cards_shimmer" />
+
+                <include layout="@layout/list_item_cards_shimmer" />
+
+                <include layout="@layout/list_item_cards_shimmer" />
+
+                <include layout="@layout/list_item_cards_shimmer" />
+
+                <include layout="@layout/list_item_cards_shimmer" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_cards"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_small"
+        android:visibility="invisible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/list_item_cards" />
+
+
+</FrameLayout>
