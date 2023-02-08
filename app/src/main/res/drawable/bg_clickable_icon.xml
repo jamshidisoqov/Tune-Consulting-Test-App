@@ -5,5 +5,9 @@
             <solid android:color="@color/primaryVariant" />
         </shape>
     </item>
-    <item android:state_pressed="false" />
+    <item android:state_pressed="false">
+        <shape>
+
+        </shape>
+    </item>
 </selector>

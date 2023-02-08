@@ -52,7 +52,6 @@ class CardHelperImpl @Inject constructor(
         callbackFlow<ResultData<Unit>> {
             fireStore.collection(CARDS_COLLECTION)
                 .whereEqualTo("cardNumber", cardRequest.cardNumber)
-                .whereEqualTo("cardExpiredDate", cardRequest.cardExpiredDate)
                 .get()
                 .addOnSuccessListener {
                     if (it.documents.isNotEmpty()) {

@@ -8,6 +8,7 @@
     app:cardCornerRadius="@dimen/margin_large">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#B8D8F1"
@@ -48,7 +49,7 @@
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1f" />
+                    android:layout_weight="1" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/clickable_image_size"
@@ -64,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginStart="@dimen/margin_small"
-                android:layout_weight="1f"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:textColor="@color/white"
                 android:textSize="24sp"
@@ -76,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginStart="@dimen/margin_small"
-                android:layout_weight="1f"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -86,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="@dimen/margin_small"
-                android:layout_weight="1f"
+                android:layout_weight="1"
                 android:gravity="center_vertical">
 
                 <com.google.android.material.textview.MaterialTextView
@@ -102,7 +103,7 @@
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1f"/>
+                    android:layout_weight="1"/>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tv_card_expired_date"

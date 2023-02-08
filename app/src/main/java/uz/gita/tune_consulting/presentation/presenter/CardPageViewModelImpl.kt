@@ -8,14 +8,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import uz.gita.tune_consulting.data.models.reponse.CardResponse
-import uz.gita.tune_consulting.domain.useCase.GetAllCards
+import uz.gita.tune_consulting.domain.useCase.GetAllCardsUseCase
 import uz.gita.tune_consulting.presentation.ui.cards.page.CardPageViewModel
 import uz.gita.tune_consulting.utils.hasConnection
 import javax.inject.Inject
 
 @HiltViewModel
 class CardPageViewModelImpl @Inject constructor(
-    private val getAllCards: GetAllCards
+    private val getAllCardsUseCase: GetAllCardsUseCase
 ) : CardPageViewModel, ViewModel() {
 
     override val allCardsFlow: MutableStateFlow<List<CardResponse>> = MutableStateFlow(emptyList())
@@ -32,7 +32,7 @@ class CardPageViewModelImpl @Inject constructor(
         viewModelScope.launch {
             if (hasConnection()) {
                 loadingFlow.emit(true)
-                getAllCards.getAllCards()
+                getAllCardsUseCase.getAllCards()
                     .collectLatest { result ->
                         loadingFlow.emit(false)
                         result.onSuccess {

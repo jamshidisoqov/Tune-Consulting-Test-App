@@ -18,5 +18,14 @@
         android:id="@+id/cardsScreen"
         tools:layout="@layout/screen_cards"
         android:name="uz.gita.tune_consulting.presentation.ui.cards.CardsScreen"
-        android:label="CardsScreen" />
+        android:label="CardsScreen" >
+        <action
+            android:id="@+id/action_cardsScreen_to_addCardScreen"
+            app:destination="@id/addCardScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCardScreen"
+        tools:layout="@layout/screen_add_card"
+        android:name="uz.gita.tune_consulting.presentation.ui.cards.add.AddCardScreen"
+        android:label="AddCardScreen" />
 </navigation>

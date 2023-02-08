@@ -32,11 +32,11 @@ class CardsPage : Fragment(R.layout.page_cards) {
 
         viewModel.loadingFlow.onEach {
             if (it) {
-                scrollContainerShimmer.visible()
+                shimmerLayout.visible()
                 shimmerLayout.startShimmer()
                 listCards.gone()
             } else {
-                scrollContainerShimmer.gone()
+                shimmerLayout.gone()
                 shimmerLayout.stopShimmer()
                 listCards.visible()
             }

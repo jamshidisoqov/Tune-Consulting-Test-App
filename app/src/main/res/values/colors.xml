@@ -10,4 +10,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="error_color">#D61E1E</color>
     <color name="error_color_trans">#80D61E1E</color>
+    <color name="parse">#C0A0F4</color>
 </resources>

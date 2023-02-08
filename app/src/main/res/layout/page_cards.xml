@@ -5,13 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/scroll_container_shimmer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none"
-        tools:ignore="UselessLeaf">
-
         <com.facebook.shimmer.ShimmerFrameLayout
             android:id="@+id/shimmer_layout"
             android:layout_width="match_parent"
@@ -19,8 +12,12 @@
             android:animateLayoutChanges="true"
             android:animationCache="true"
             app:shimmer_duration="1000"
-            app:shimmer_repeat_mode="restart"
-            app:shimmer_shape="radial">
+            app:shimmer_repeat_mode="restart">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -49,9 +46,8 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
+            </ScrollView>
         </com.facebook.shimmer.ShimmerFrameLayout>
-
-    </ScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_cards"

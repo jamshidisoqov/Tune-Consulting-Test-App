@@ -7,10 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import uz.gita.tune_consulting.R
 import uz.gita.tune_consulting.data.models.reponse.CardResponse
 import uz.gita.tune_consulting.databinding.ListItemCardsBinding
-import uz.gita.tune_consulting.utils.extensions.combine
-import uz.gita.tune_consulting.utils.extensions.include
-import uz.gita.tune_consulting.utils.extensions.inflate
-import uz.gita.tune_consulting.utils.extensions.toDateFormat
+import uz.gita.tune_consulting.utils.extensions.*
+import uz.gita.tune_consulting.utils.getBackground
 
 // Created by Jamshid Isoqov on 2/8/2023
 
@@ -30,9 +28,10 @@ class CardsAdapter : ListAdapter<CardResponse, CardsAdapter.ViewHolder>(cardItem
         RecyclerView.ViewHolder(binding.root) {
         fun onBind() = binding.include {
             val data = getItem(absoluteAdapterPosition)
-            tvCardNumber.text = data.cardNumber
+            tvCardNumber.text = data.cardNumber.getCardType()
             tvCardExpiredDate.text = data.cardExpiredDate.toLong().toDateFormat()
-            tvCardBalance.text = (Math.random() * 1000).toString().combine("UZS")
+            tvCardBalance.text = (Math.random() * 1000).getFormat(2).combine("UZS")
+            containerCard.setBackgroundResource(getBackground(absoluteAdapterPosition))
         }
     }
 

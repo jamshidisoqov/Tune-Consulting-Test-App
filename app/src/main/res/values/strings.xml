@@ -15,4 +15,6 @@
     <string name="hint_card_number">0000000000000000</string>
     <string name="continue_text">Continue</string>
     <string name="enter_card_info">Enter card info</string>
+    <string name="choose_date">Choose date</string>
+    <string name="save">Save</string>
 </resources>
